@@ -11,3 +11,28 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         fields = ('url', 'name')
+
+class CategoriaSerializer(serializers.HyperlinkedModelSerializer):
+	class Meta:
+		model = Categoria
+		fields = ('nombre',)
+
+class ReportajeSerializer(serializers.HyperlinkedModelSerializer):
+	class Meta:
+		model = Categoria
+		fields = ('titulo','lead','nota','tags','fecha','estado','reportero')
+
+class ImagenSerializer(serializers.HyperlinkedModelSerializer):
+	class Meta:
+		model = Imagen
+		fields = ('imagen','titulo','reportaje')
+
+class AudioSerializer(serializers.HyperlinkedModelSerializer):
+	class Meta:
+		model = Audio
+		fields = ('audio','titulo','reportaje')
+
+class VideoSerializer(serializers.HyperlinkedModelSerializer):
+	class Meta:
+		model = Video
+		fields = ('video','titulo','reportaje')
