@@ -144,3 +144,7 @@ REST_FRAMEWORK = {
     ),
     'PAGINATE_BY': 10
 }
+
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=30),  # Token expires * minutes after being issued
+ }
