@@ -28,6 +28,7 @@ class Reportaje(models.Model):
 	fecha = models.DateField(blank=True)
 	estado = models.CharField(max_length=50,choices=estado)
 	reportero = models.ForeignKey(User,default=None,verbose_name = "Reportero")
+	categoria = models.ForeignKey(Categoria,default=None,verbose_name = "Categoria")
 
 	class Meta:
 		db_table = 'Reportaje'
