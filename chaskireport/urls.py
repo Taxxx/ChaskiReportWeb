@@ -31,3 +31,6 @@ urlpatterns += [
     url(r'^api/', include(router.urls)),
     url(r'^api-token-auth/', 'rest_framework_jwt.views.obtain_jwt_token'),
 ]
+
+urlpatterns += patterns('',
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),)#url segun stackoverflow
