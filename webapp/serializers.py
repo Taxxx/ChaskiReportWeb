@@ -19,7 +19,7 @@ class CategoriaSerializer(serializers.HyperlinkedModelSerializer):
 
 class ReportajeSerializer(serializers.HyperlinkedModelSerializer):
 	class Meta:
-		model = Categoria
+		model = Reportaje
 		fields = ('titulo','lead','nota','tags','fecha','estado','reportero')
 
 class ImagenSerializer(serializers.HyperlinkedModelSerializer):
